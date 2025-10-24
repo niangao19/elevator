@@ -11,13 +11,14 @@ class Elevator:
         self.queue.append(floor)
         print(f"{self.name} received new request → floor {floor}")
 
-    def display_floor( self) :
-        print( f' current floor is : {self.current_floor}' )
+    def display_floor( self, need_p : bool = True) :
+        if need_p :
+            print( f' current floor is : {self.current_floor}' )
         return self.current_floor
     
     def move(self , current: int, floor: int) :
         self.current_floor = current + floor
-        self.display_floor()
+        return self.display_floor(True)
         
 
 
