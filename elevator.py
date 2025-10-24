@@ -13,7 +13,7 @@ class Elevator:
 
     def display_floor( self, need_p : bool = True) :
         if need_p :
-            print( f' current floor is : {self.current_floor}' )
+            print( f'elevator : {self.name} current floor is : {self.current_floor}' )
         return self.current_floor
     
     def move(self , current: int, floor: int) :
